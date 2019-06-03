@@ -167,6 +167,15 @@ h5 {
     padding-left: 20px;
 }
 
+.head_wrapper {
+    margin-right: auto;
+    margin-left: auto;
+
+    max-width: 960px;
+
+    padding-right: 20px;
+    padding-left: 20px;
+}
 
 
 /* --------Header  --------- */
@@ -185,10 +194,40 @@ h5 {
     }
 }
 
+@media (max-width: 500px) {
+    .nav {
+        flex-direction: column;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .head_wrapper {
+        margin-right: auto;
+        margin-left: auto;
+
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+
+
 .nav a {
     text-decoration: none;
     color: #868383;
 }
+
+@media (max-width: 500px) {
+    .nav a {
+        border-bottom: 1px solid #868383;
+        width: 100%;
+        text-align: center;
+        padding: 25px 0;
+        font-size: 130%;
+    }
+}
+
 
 @media (max-width: 800px) {
     .nav a:not(:last-child) {
@@ -197,6 +236,17 @@ h5 {
 
     .nav a:first-child {
         padding-left: 10px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .nav a:not(:last-child) {
+        padding-right: 0;
+    }
+
+    .nav a:first-child {
+        padding-left: 0;
     }
 
 }
@@ -211,6 +261,7 @@ h5 {
     .nav a:last-child {
         order: -1;
         width: 100%;
+
     }
 }
 
@@ -219,6 +270,12 @@ h5 {
         display: flex;
         justify-content: center;
         margin-bottom: 39px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav_logo {
+        margin-bottom: 0;
     }
 }
 
@@ -295,12 +352,28 @@ h5 {
     margin-bottom: 30px;
 }
 
+@media (max-width: 500px) {
+    .box {
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+    }
+}
+
 /* --------Mid_top--------- */
 .parent {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 25px 0;
+}
+
+@media (max-width: 500px) {
+    .parent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 0 0 0;
+    }
 }
 
 .child {
@@ -312,6 +385,12 @@ p {
     font-size: 90%;
     font-family: 'Roboto Condensed',
         sans-serif;
+}
+
+@media (max-width: 500px) {
+    .parent p {
+        width: 100%;
+    }
 }
 
 /* --------Mid_bottom--------- */
@@ -390,7 +469,13 @@ p {
 .child {
     /* Child */
     width: 45%;
+}
 
+@media (max-width: 500px) {
+    .child {
+        width: 100%;
+        padding: 25px 0;
+    }
 }
 
 .child img {
